@@ -1,0 +1,6 @@
+fastapi[all]
+sqlmodel
+passlib[bcrypt]
+python-multipart
+boto3
+python-dotenv
