@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNK Media</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <img class="sidebar-img logo" 
+             src="../../assets/images/logo.jpeg" 
+             alt="Logo" 
+             onclick="window.location.href='index.html';">
+        <img class="sidebar-img icon active" 
+             src="../../assets/images/Home.png" 
+             alt="Inicio" 
+             onclick="window.location.href='index.html';">
+    </aside>
+
+    <div class="main-content">
+        <header class="top-bar">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar">
+            </div>
+            
+            <button onclick="window.location.href='crear.html';" style="background-color: #ff6040; color: white; border: none; padding: 10px 24px; border-radius: 24px; font-weight: bold; font-size: 15px; cursor: pointer; margin-right: 15px; transition: background-color 0.2s;">
+                Subir
+            </button>
+            
+            <img class="profile-img" onclick="window.location.href='usuario.html';" src="https://i.pinimg.com/736x/18/cd/6f/18cd6f197f743ecfdf931d890cb43f80.jpg" alt="Perfil">
+        </header>
+
+        <nav class="categories-bar">
+        </nav>
+
+        <main>
+            <div class="pin-container">
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../JS/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNKMedia - Perfil</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <img class="sidebar-img logo" src="../../assets/images/logo.jpeg" alt="Logo" onclick="window.location.href='index.html';">
+        <img class="sidebar-img icon" src="../../assets/images/Home.png" alt="Inicio" onclick="window.location.href='index.html';">
+    </aside>
+
+    <div class="main-content">
+        <header class="top-bar">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar">
+            </div>
+            <button onclick="window.location.href='crear.html';" style="background-color: #ff6040; color: white; border: none; padding: 10px 24px; border-radius: 24px; font-weight: bold; font-size: 15px; cursor: pointer; margin-right: 15px;">Subir</button>
+            <img class="profile-img" src="https://i.pinimg.com/736x/18/cd/6f/18cd6f197f743ecfdf931d890cb43f80.jpg" alt="Perfil" id="header-profile-img" style="cursor: pointer;" onclick="window.location.href='usuario.html';">
+        </header>
+
+        <main>
+            <section class="profile-header" style="text-align: center; margin-top: 40px;">
+                <img class="profile-large-img" id="profile-avatar" src="https://i.pinimg.com/736x/18/cd/6f/18cd6f197f743ecfdf931d890cb43f80.jpg" alt="Foto de perfil" style="margin-bottom: 15px;">
+                
+                <div id="view-profile-box">
+                    <h1 class="profile-fullname" id="profile-display-name" style="font-size: 36px; margin-bottom: 5px;">Cargando...</h1>
+                    <p class="profile-username" id="profile-email" style="color: #767676; margin-bottom: 25px;">@cargando...</p>
+                    
+                    <div class="profile-actions" style="display: flex; justify-content: center; gap: 10px;">
+                        <button class="btn-secondary" id="btn-edit-toggle" style="background: #efefef; color: #333; border: none; padding: 10px 20px; border-radius: 24px; font-weight: bold; cursor: pointer; font-size: 15px;">Editar Perfil</button>
+                        <button class="btn-secondary" id="btn-logout" style="color: #ff6040; border: 2px solid #ff6040; background-color: transparent; padding: 8px 20px; border-radius: 24px; font-weight: bold; cursor: pointer; font-size: 15px;">Cerrar sesión</button>
+                    </div>
+                </div>
+
+                <div id="edit-profile-form" style="display: none; max-width: 320px; margin: 0 auto; margin-top: 15px; background: #f9f9f9; padding: 25px; border-radius: 16px; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <label style="font-weight: bold; font-size: 14px; display: block; margin-bottom: 8px;">Nuevo Nombre Visible (Máx 18):</label>
+                    <input type="text" id="input-new-name" maxlength="18" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 15px; outline: none; box-sizing: border-box;">
+                    
+                    <label style="font-weight: bold; font-size: 14px; display: block; margin-bottom: 8px;">Cambiar Foto de Perfil:</label>
+                    <input type="file" id="input-new-avatar" accept="image/*" style="width: 100%; margin-bottom: 20px; font-size: 14px;">
+                    
+                    <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                        <button id="btn-cancel-edit" style="background: #cdcdcd; color: white; border: none; padding: 10px 20px; border-radius: 24px; font-weight: bold; cursor: pointer;">Cancelar</button>
+                        <button id="btn-save-profile" style="background: #ff6040; color: white; border: none; padding: 10px 20px; border-radius: 24px; font-weight: bold; cursor: pointer;">Guardar</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="profile-tabs" style="margin-top: 50px;">
+                <button class="tab-btn active">Creados</button>
+                <button class="tab-btn" id="tab-saved-btn">Guardados</button>
+            </div>
+
+            <div class="pin-container" id="user-pins-grid" style="margin-top: 20px;"></div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../JS/usuario.js"></script>
+</body>
+</html>

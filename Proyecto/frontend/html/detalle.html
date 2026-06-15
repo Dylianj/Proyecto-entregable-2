@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNKMedia - Detalle</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/detalle.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <img class="sidebar-img logo" src="../../assets/images/logo.jpeg" alt="Logo" onclick="window.location.href='index.html';">
+        <img class="sidebar-img icon" src="../../assets/images/Home.png" alt="Inicio" onclick="window.location.href='index.html';">
+    </aside>
+
+    <div class="main-content">
+        <header class="top-bar">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar">
+            </div>
+            <button onclick="window.location.href='crear.html';" style="background-color: #ff6040; color: white; border: none; padding: 10px 24px; border-radius: 24px; font-weight: bold; font-size: 15px; cursor: pointer; margin-right: 15px;">Subir</button>
+            <img class="profile-img" src="https://i.pinimg.com/736x/18/cd/6f/18cd6f197f743ecfdf931d890cb43f80.jpg" alt="Perfil" id="header-profile-img" style="cursor: pointer;" onclick="window.location.href='usuario.html';">
+        </header>
+
+        <main class="page-layout" style="flex-direction: column; align-items: center;">
+            <div class="pin-detail-view">
+                <div class="pin-detail-left">
+                    <div class="back-btn-container" style="position: absolute; top: 20px; left: 20px; z-index: 10;">
+                        <button onclick="window.location.href='index.html';" style="border: none; background: white; border-radius: 50%; width: 48px; height: 48px; font-size: 20px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">←</button>
+                    </div>
+                    <img id="detail-image" src="" alt="Imagen del Pin">
+                </div>
+
+                <div class="pin-detail-right">
+                    <div class="pin-actions" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                        <div class="action-icons" style="display: flex; align-items: center; gap: 10px;">
+                            <button id="btn-like" style="border: none; background: #efefef; border-radius: 50%; width: 48px; height: 48px; cursor: pointer; font-size: 20px; transition: 0.2s;">❤️</button>
+                            <span id="like-count" style="font-weight: bold; font-size: 16px;">0</span>
+                        </div>
+                        <div class="action-buttons" style="display: flex; align-items: center; gap: 15px;">
+                            <button id="btn-delete-post" style="display: none; background-color: #ff3b30; color: white; border: none; padding: 12px 20px; border-radius: 24px; font-weight: bold; font-size: 15px; cursor: pointer; transition: 0.2s;">Borrar</button>
+                            <span id="author-name" onclick="window.location.href='usuario.html';" style="font-weight: bold; font-size: 16px; cursor: pointer; text-decoration: underline;">Perfil del Autor</span>
+                            <button class="save-button" style="background-color: #ff6040; color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: bold; font-size: 16px; cursor: pointer;">Guardar</button>
+                        </div>
+                    </div>
+
+                    <h1 id="detail-title" style="font-size: 32px; margin-bottom: 10px;">Cargando...</h1>
+                    <p id="detail-description" style="font-size: 16px; color: #333; margin-bottom: 40px;"></p>
+
+                    <div class="comments-section" style="margin-top: 30px; border-top: 1px solid #efefef; padding-top: 20px;">
+                        <h3 id="comments-count" style="font-size: 20px; margin-bottom: 20px;">0 comentarios</h3>
+                        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                            <input type="text" id="comment-input" placeholder="Añade un comentario" style="flex: 1; padding: 12px; border-radius: 24px; border: 1px solid #cdcdcd; outline: none; font-size: 15px;">
+                            <button id="btn-comment" style="background: #efefef; border: none; padding: 12px 20px; border-radius: 24px; cursor: pointer; font-weight: bold; font-size: 15px;">Enviar</button>
+                        </div>
+                        <div id="comments-list" style="display: flex; flex-direction: column; gap: 15px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="similar-content" style="margin-top: 50px; border-top: 2px solid #efefef; padding-top: 30px; width: 100%; max-width: 1016px;">
+                <h2 style="font-size: 22px; margin-bottom: 20px; text-align: center;">Más contenido similar</h2>
+                <div id="similar-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-top: 20px;">
+                    </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../JS/detalle.js"></script>
+</body>
+</html>

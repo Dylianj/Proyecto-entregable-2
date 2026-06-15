@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest - Registro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="../../assets/images/logo.jpeg" alt="Logo de la aplicación">
+        </div>
+        
+        <div class="form-box" id="loginForm">
+            <h2>Te damos la bienvenida a VNKmedia</h2>
+            <p class="subtitle">Encuentra nuevas ideas para intentar</p>
+            
+            <form id="mi-formulario-registro">
+                <div class="input-group">
+                    <label for="reg-email">Correo electrónico</label>
+                    <input type="email" id="reg-email" placeholder="Introduce tu correo" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-password">Contraseña</label>
+                    <input type="password" id="reg-password" placeholder="Crea una contraseña" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-age">Edad</label>
+                    <input type="number" id="reg-age" placeholder="Edad" min="14" required>
+                </div>
+                <button type="submit" class="btn btn-red">Continuar</button>
+            </form>
+
+            <div class="divider"><span>O</span></div>
+
+            <p class="footer-text">¿Ya eres miembro? <a href="login.html">Inicia sesión</a></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script src="../JS/register.js"></script>
+</body>
+</html>
